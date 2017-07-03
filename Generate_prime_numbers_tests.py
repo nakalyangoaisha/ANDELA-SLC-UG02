@@ -13,5 +13,8 @@ class TestGeneratePrimeNumbers(unittest.TestCase):
 
     def test_function_returns_error_if_arg_is_less_than_three(self):
         self.assertRaises(ValueError, generatePrimeNumbers, 2)
-    
 
+    def test_function_returns_list(self):
+        self.assertTrue(isinstance(generatePrimeNumbers(self.arg_limit), list))
+
+    
