@@ -10,3 +10,8 @@ class TestGeneratePrimeNumbers(unittest.TestCase):
 
     def test_function_returns_error_message_if_arg_not_integer(self):
         self.assertRaises(TypeError, generatePrimeNumbers, 'two')
+
+    def test_function_returns_error_if_arg_is_less_than_three(self):
+        self.assertRaises(ValueError, generatePrimeNumbers, 2)
+    
+
