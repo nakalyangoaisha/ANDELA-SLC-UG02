@@ -1,4 +1,5 @@
 import unittest
+from math import sqrt
 from Generate_prime_numbers import generatePrimeNumbers
 
 
@@ -22,3 +23,21 @@ class TestGeneratePrimeNumbers(unittest.TestCase):
 
     def test_function_returns_prime_numbers_less_than_arg(self):
         self.assertTrue(all(x < self.arg_limit for x in generatePrimeNumbers(self.arg_limit)))
+
+    def test_function_returns_only_prime_numbers(self):
+        isprime = True
+        for x in generatePrimeNumbers(self.arg_limit):
+            sqrt_value = sqrt(x)
+            sample_range = []
+            for i in self.sample_prime:
+                if i <= int(sqrt_value):
+                    sample_range.append(i)
+            for y in sample_range:
+                if x % y == 0:
+                    isprime = False
+                    break
+        self.assertTrue(isprime)
+
+
+if __name__ == '__main__':
+    unittest.main()
