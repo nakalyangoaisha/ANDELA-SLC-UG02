@@ -17,4 +17,5 @@ class TestGeneratePrimeNumbers(unittest.TestCase):
     def test_function_returns_list(self):
         self.assertTrue(isinstance(generatePrimeNumbers(self.arg_limit), list))
 
-    
+    def test_list_returned_contains_values_greater_than_one(self):
+        self.assertTrue(all(x >= 2 for x in generatePrimeNumbers(self.arg_limit)))
