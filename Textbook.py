@@ -30,7 +30,7 @@ class Textbook(object):
 
     @abc.abstractmethod
     def book_type(self):
-        """Returns a string representing the type of textbook this"""
+        """Returns a string representing the type of textbook this is"""
         pass
 
 
@@ -40,7 +40,7 @@ class MathsBook(Textbook):
     pages = 900
 
     def book_type(self):
-        """Returns a string representing the type of textbook this"""
+        """Returns a string representing the type of textbook this is"""
         return 'Maths book'
 
 
@@ -50,7 +50,7 @@ class EnglishBook(Textbook):
     pages = 800
 
     def book_type(self):
-        """Returns a string representing the type of textbook this"""
+        """Returns a string representing the type of textbook this is"""
         return 'English book'
 
 
@@ -60,5 +60,5 @@ class EconomicsBook(Textbook):
     pages = 1000
 
     def book_type(self):
-        """Returns a string representing the type of textbook this"""
+        """Returns a string representing the type of textbook this is"""
         return 'Economics_book'
