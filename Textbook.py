@@ -32,3 +32,33 @@ class Textbook(object):
     def book_type(self):
         """Returns a string representing the type of textbook this"""
         pass
+
+
+class MathsBook(Textbook):
+    """Class MathsBook inherits from Textbook"""
+    initial_sale_price = 45000
+    pages = 900
+
+    def book_type(self):
+        """Returns a string representing the type of textbook this"""
+        return 'Maths book'
+
+
+class EnglishBook(Textbook):
+    """Class EnglishBook inherits from Textbook"""
+    initial_sale_price = 9000
+    pages = 800
+
+    def book_type(self):
+        """Returns a string representing the type of textbook this"""
+        return 'Cookbook'
+
+
+class EconomicsBook(Textbook):
+    """Class EconomicsBook inherits from Textbook"""
+    initial_sale_price = 15000
+    pages = 1000
+
+    def book_type(self):
+        """Returns a string representing the type of textbook this"""
+        return 'Economics_book'
