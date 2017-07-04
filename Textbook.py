@@ -51,7 +51,7 @@ class EnglishBook(Textbook):
 
     def book_type(self):
         """Returns a string representing the type of textbook this"""
-        return 'Cookbook'
+        return 'English book'
 
 
 class EconomicsBook(Textbook):
